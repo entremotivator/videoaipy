@@ -23,6 +23,7 @@ def edit_video(input_path, output_path, start_time, end_time, text, font_size=70
         return True
     except Exception as e:
         st.error(f"Error: {str(e)}")
+        st.exception(e)  # Display exception details for debugging
         return False
 
 def display_video(file_path, message=""):
