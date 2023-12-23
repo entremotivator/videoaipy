@@ -53,7 +53,7 @@ def main():
         if st.button("Edit Video"):
             with st.spinner("Processing..."):
                 output_path = f"edited_video.{output_format}"
-                success = edit_video(uploaded_file, output_path, start_time[0], start_time[1], text, font_size, text_color, playback_speed, output_format, text_position)
+                success = edit_video(uploaded_file.name, output_path, start_time[0], start_time[1], text, font_size, text_color, playback_speed, output_format, text_position)
 
             if success:
                 st.success(f"Video edited successfully. [Download Edited Video](./{output_path})")
